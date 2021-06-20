@@ -1,4 +1,4 @@
-released code for NP-DRAW paper
+Released code for NP-DRAW paper
 
 ## Dependencies
 ```bash
@@ -7,31 +7,26 @@ conda env create -f environment.yml # edit the last link in the yml file for the
 conda activate npdraw 
 ```
 ## Pretrained Model 
-Pretrained model will be available [here] 
-To use the pretrained models, download the `exp` folder and put it under the project root directory.
+Pretrained model will be available [here](https://drive.google.com/drive/folders/1jTlN6dWv9MnOd7Jo5H5yMpc-pFErYLS1?usp=sharing) 
+To use the pretrained models, download the `zip` file under `exp` folder and unzip it. For expample, with the `cifar.zip` file we will get `./exp/cifarcm/cat_vloc_at/` and `./exp/cnn_prior/cifar/`. 
 
 #### Testing the pretrained NPDRAW model:
+
+* before running the evaluation, please also download the stats on the test set from [google-drive](https://drive.google.com/file/d/1U3sBE2kbhFdutTSLj26oHnGIYiXAP6OF/view?usp=sharing), and run 
+```
+mkdir datasets 
+mv images.tar.gz datasets 
+cd datasets 
+tar xzf images.tar.gz 
+``` 
+
 The following commands test the FID score of the NPDRAW model. 
 The commands output the CD and EMD on the test/validation sets.
-
 ```bash
 # Usage:
 bash scripts/local_sample.sh exp/stoch_mnist/cat_vloc_at/0208/p5s5n36vitBinkl1r1E3_K50w5sc0_gs_difflr_b500/ckpt_epo799.pth 
-
-python test.py configs/recon/airplane/airplane_recon_add.yaml \
-    --pretrained pretrained/recon/airplane_recon_add.pt
-python test.py configs/recon/car/car_recon_add.yaml \
-    --pretrained pretrained/recon/car_recon_add.pt
-python test.py configs/recon/chair/chair_recon_add.yaml \
-    --pretrained pretrained/recon/chair_recon_add.pt
+bash scripts/local_sample.sh exp/cifarcm/cat_vloc_at/0208/p4s4n64_vitcnnLkl11E3_K200w4sc0_gs_difflr_b150/ckpt_epo499.pth 
 ```
-The pretrained model's auto-encoding performance is as follows:
-| Dataset  | Metrics  | Ours  | Oracle |
-|----------|----------|-------|--------|
-| Airplane | CD x1e4  | 0.966 |  0.837 |
-|          | EMD x1e2 | 2.632 |  2.062 |
-| Chair    | CD x1e4  | 5.660 |  3.201 |
-|          | EMD x1e2 | 4.976 |  3.297 |
-| Car      | CD x1e4  | 5.306 |  3.904 |
-|          | EMD x1e2 | 4.380 |  3.251 |
 
+## Training 
+Use `./scripts/train_$DATASET.sh` to train the model. 
