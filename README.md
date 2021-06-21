@@ -1,4 +1,9 @@
-Released code for NP-DRAW paper
+# NP-DRAW: A Non-Parametric Structured Latent Variable Model for Image Generation
+
+This repo contains the official implementation for the paper [NP-DRAW](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw.pdf). 
+[[paper]](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw.pdf) | [[supp]](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw_supp.pdf)  
+
+by [Xiaohui Zeng](https://www.cs.utoronto.ca/xiaohui), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/), [Richard Zemel](http://www.cs.toronto.edu/~zemel/inquiry/home.php), [Sanja Fidler](https://www.cs.utoronto.ca/~fidler/), and [Renjie Liao](http://www.cs.toronto.edu/~rjliao/)
 
 ## Dependencies
 ```bash
@@ -30,3 +35,7 @@ bash scripts/local_sample.sh exp/cifarcm/cat_vloc_at/0208/p4s4n64_vitcnnLkl11E3_
 
 ## Training 
 Use `./scripts/train_$DATASET.sh` to train the model. 
+
+----------------------
+* The code in `tool/pytorch-fid/` is adapated from [here](https://github.com/mseitzer/pytorch-fid)
+* The transformer code is adapted from [here](https://github.com/lucidrains/vit-pytorch/blob/main/vit_pytorch/vit_pytorch.py)
