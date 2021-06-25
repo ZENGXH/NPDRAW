@@ -20,8 +20,8 @@ Our prior generate "whether", "where" and "what" to draw per step. If the "wheth
 ## More visualization of the canvas and images 
 ![mnist](https://user-images.githubusercontent.com/12856437/122693351-7be2d780-d207-11eb-96e9-1ee965bdd3b8.gif)
 ![omni](https://user-images.githubusercontent.com/12856437/122693350-78e7e700-d207-11eb-9d2b-035d03a17d9f.gif)
-![cifar](https://user-images.githubusercontent.com/12856437/122693478-062b3b80-d208-11eb-9bdd-4805adc1883c.png)
-![celeba](https://user-images.githubusercontent.com/12856437/122693481-09262c00-d208-11eb-9ca1-726c7448452f.png)
+![cifar](https://github.com/ZENGXH/NPDRAW/blob/main/docs/cifar.gif) 
+![celeba](https://github.com/ZENGXH/NPDRAW/blob/main/docs/celeba_gif.gif) 
 
 ## Latent Space Editting 
 We demonstrate the advantage of our interpretable latent space via interactively editing/composing the latent canvas. 
