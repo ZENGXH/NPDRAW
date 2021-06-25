@@ -2,3 +2,5 @@
 datasets
 exp/*
 clean_model_dir.sh
+*.swp
+*.swo

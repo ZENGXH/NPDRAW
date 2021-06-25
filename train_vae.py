@@ -73,6 +73,13 @@ def main():
     full_exp_dir = os.path.join(exp_dir, cfg.exp_name)
     if not os.path.isdir(full_exp_dir) and args.local_rank == 0: 
         os.makedirs(full_exp_dir) 
+    
+    cfg_path = os.path.join(full_exp_dir, 'cfg.yml')
+    is_train_from_scratch = args.resume is None and not args.eval_only and not args.eval_fid_only 
+    if ( is_train_from_scratch or not os.path.exists(cfg_path) ) and args.local_rank == 0: 
+        with open(cfg_path, 'w') as file:
+            file.write(cfg.dump()) 
+
     if args.local_rank == 0:
         log_file = 'eval.log' if args.eval_only else 'train.log'
         log_file = os.path.join(exp_dir, cfg.exp_name, log_file)
