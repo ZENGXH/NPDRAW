@@ -1,7 +1,7 @@
 # NP-DRAW: A Non-Parametric Structured Latent Variable Model for Image Generation
 
 This repo contains the official implementation for the paper [NP-DRAW](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw.pdf). 
-[[paper]](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw.pdf) | [[supp]](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw_supp.pdf)  
+[[paper]](https://www.cs.utoronto.ca/~xiaohui/paper/npdraw/npdraw.pdf) 
 
 by [Xiaohui Zeng](https://www.cs.utoronto.ca/xiaohui), [Raquel Urtasun](http://www.cs.toronto.edu/~urtasun/), [Richard Zemel](http://www.cs.toronto.edu/~zemel/inquiry/home.php), [Sanja Fidler](https://www.cs.utoronto.ca/~fidler/), and [Renjie Liao](http://www.cs.toronto.edu/~rjliao/)
 
