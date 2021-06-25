@@ -53,6 +53,9 @@ from torchvision import datasets, transforms, utils
 from PIL import Image
 import re 
 
+SEED = 0 
+np.random.seed(SEED)
+torch.manual_seed(SEED) 
 try:
     from tqdm import tqdm
 except ImportError:

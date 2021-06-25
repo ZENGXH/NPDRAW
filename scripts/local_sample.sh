@@ -19,6 +19,7 @@ elif [[ $gt_file == *"celeba"* ]]; then
 elif [[ $gt_file == *"omni"* ]]; then
     data="omni"
     tar="datasets/images/omni_test.npy" 
+    bin=1
 else 
     echo "unknow data for $gt_file" 
     exit

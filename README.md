@@ -28,9 +28,17 @@ tar xzf images.tar.gz
 The following commands test the FID score of the NPDRAW model. 
 The commands output the CD and EMD on the test/validation sets.
 ```bash
-# Usage:
-bash scripts/local_sample.sh exp/stoch_mnist/cat_vloc_at/0208/p5s5n36vitBinkl1r1E3_K50w5sc0_gs_difflr_b500/ckpt_epo799.pth 
-bash scripts/local_sample.sh exp/cifarcm/cat_vloc_at/0208/p4s4n64_vitcnnLkl11E3_K200w4sc0_gs_difflr_b150/ckpt_epo499.pth 
+# for mnist 
+bash scripts/local_sample.sh exp/stoch_mnist/cat_vloc_at/0208/p5s5n36vitBinkl1r1E3_K50w5sc0_gs_difflr_b500/E00550.pth # FID 2.55  
+
+# for omniglot 
+bash scripts/local_sample.sh exp/omni/cat_vloc_at/0208/p5s5n36vitBinkl1r1E3_K50w5sc0_gs_difflr_b500/ckpt_epo799.pth # FID 5.53
+
+# for cifar 
+bash scripts/local_sample.sh exp/cifarcm/cat_vloc_at/0208/p4s4n64_vitcnnLkl11E3_K200w4sc0_gs_difflr_b150/ckpt_epo499.pth # 
+
+# for celeba  
+bash scripts/local_sample.sh exp/celebac32/cat_vloc_at/0208/p4s4n64_vitcnnLkl0e531E3_K200w4sc0_gs_difflr_b150/ckpt_epo199.pth # FID 41.29  
 ```
 
 ## Training 
@@ -39,3 +47,4 @@ Use `./scripts/train_$DATASET.sh` to train the model.
 ----------------------
 * The code in `tool/pytorch-fid/` is adapated from [here](https://github.com/mseitzer/pytorch-fid)
 * The transformer code is adapted from [here](https://github.com/lucidrains/vit-pytorch/blob/main/vit_pytorch/vit_pytorch.py)
+
