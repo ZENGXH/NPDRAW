@@ -221,13 +221,9 @@ def load_prior_with_patch_bank(info_dict, cfg, device, metric=None, n_class_loc=
         if not LESS_VERBOSE: logger.info('[load prior cfg] {}/cfg.yml', output_folder) 
         prior_cfg.merge_from_file(f'{output_folder}/cfg.yml')
         if not LESS_VERBOSE: logger.info('[p_h(z|x)] {}', prior_cfg.gt_file) 
-        if metric is not None:
-            metric.write('prior', 'https://www.comet.ml/zengxh/patch2img/'+prior_cfg.exp_key)
-            metric.write('gt', prior_cfg.gt_file)
-        if os.environ.get('EVAL') is not None: # write the collection file if needed 
-            with open('.results/eval_out/%s.md'%(os.environ.get('EVAL')), 'a') as f:
-                f.write('[prior] https://www.comet.ml/zengxh/patch2img/'+prior_cfg.exp_key+'\n')
-                f.write('[gt] %s'%prior_cfg.gt_file+'\n')
+        #if metric is not None:
+        #    metric.write('prior', 'https://www.comet.ml/zengxh/patch2img/'+prior_cfg.exp_key)
+        #    metric.write('gt', prior_cfg.gt_file)
     else:
         logger.warning('load cfg from args.pkl will be depreciated')
         with open(output_folder + '/args.pkl', 'rb') as f:
