@@ -13,15 +13,15 @@ Moreover, we show that our model’s inherent compositionality and interpretabil
 
 
 ## Generation Process 
-![prior](https://github.com/ZENGXH/NPDRAW/blob/main/docs/npdraw_prior.gif) 
+![prior](https://github.com/ZENGXH/NPDRAW/blob/main/docs/npdraw_prior.gif?raw=true) 
 
 Our prior generate "whether", "where" and "what" to draw per step. If the "whether-to-draw" is true, a patch from the part bank is selected and pasted to the canvas. The final canvas is refined by our decoder. 
 
 ## More visualization of the canvas and images 
 ![mnist](https://user-images.githubusercontent.com/12856437/122693351-7be2d780-d207-11eb-96e9-1ee965bdd3b8.gif)
 ![omni](https://user-images.githubusercontent.com/12856437/122693350-78e7e700-d207-11eb-9d2b-035d03a17d9f.gif)
-![cifar](https://github.com/ZENGXH/NPDRAW/blob/main/docs/cifar.gif) 
-![celeba](https://github.com/ZENGXH/NPDRAW/blob/main/docs/celeba_gif.gif) 
+![cifar](https://github.com/ZENGXH/NPDRAW/blob/main/docs/cifar.gif?raw=true) 
+![celeba](https://github.com/ZENGXH/NPDRAW/blob/main/docs/celeba_gif.gif?raw=true) 
 
 ## Latent Space Editting 
 We demonstrate the advantage of our interpretable latent space via interactively editing/composing the latent canvas. 
